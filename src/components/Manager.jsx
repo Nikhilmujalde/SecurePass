@@ -71,14 +71,14 @@ const Manager = () => {
         // alert("Heloo")
         // here we are using includes to check for the string   
 
-        if (ref.current.src.includes("./icons/see.png")) {
+        if (ref.current.src.includes("/icons/see.png")) {
             passRef.current.type = "text"
-            ref.current.src = "./icons/visible.png"
+            ref.current.src = "/icons/visible.png"
             // console.log("lsj");
         }
         else {
             passRef.current.type = "password"
-            ref.current.src = "./icons/see.png"
+            ref.current.src = "/icons/see.png"
         }
     }
     const handleChange = (e) => {
@@ -105,7 +105,7 @@ const Manager = () => {
 
                             <input ref={passRef} value={form.password} onChange={handleChange} name='password' placeholder='Enter Password' className='border  border-green-400 rounded-md text-black py-1 w-full px-4' type="password" />
                             <span className='absolute right-0 top-1  cursor-pointer' onClick={showPass}>
-                                <img ref={ref} width={26} className='p-1' src="./icons/see.png" alt="" />
+                                <img ref={ref} width={26} className='p-1' src="/icons/see.png" alt="" />
                             </span>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ const Manager = () => {
                                                 {item.userName}
                                                 <div className='cursor-pointer ' 
                                                     onClick={() => copyText(item.userName)}>
-                                                    <img className='w-6 cursor-pointer-' src="./icons/copy.png" alt="" />
+                                                    <img className='w-6 cursor-pointer-' src="/icons/copy.png" alt="" />
                                                 </div>
                                             </div>
                                         </td>
@@ -156,7 +156,7 @@ const Manager = () => {
                                             <div className='flex justify-center items-center'>
                                                 {item.password}
                                                 <div className='cursor-pointer' onClick={() => copyText(item.password)}>
-                                                    <img className='w-6 cursor-pointer-' src="./icons/copy.png" alt="" />
+                                                    <img className='w-6 cursor-pointer-' src="/icons/copy.png" alt="" />
                                                 </div>
                                             </div>
                                         </td>
@@ -172,7 +172,7 @@ const Manager = () => {
                                                 </span>
                                                 {/* <span>Edit</span> */}
                                                 <span onClick={() => handleEdit(item.id)} className='cursor-pointer mx-2'>
-                                                    <img className=' w-5' src="./icons/edit.png" alt="" />
+                                                    <img className=' w-5' src="/icons/edit.png" alt="" />
                                                 </span>
                                             </div>
                                         </td>
